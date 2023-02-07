@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todo', function () {
+Route::get('/tasks', function () {
     return view('index');
 });

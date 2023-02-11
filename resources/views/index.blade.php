@@ -33,6 +33,31 @@
         </div>
       </form>
       {{-- TODO追加フォームここまで --}}
+      <div>
+        <table class="w-1/2 mt-12 m-auto">
+          <thead>
+            <tr>
+              <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
+                タスク
+              </th>
+              <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
+                削除
+              </th>
+            </tr>
+          </thead>
+          @foreach ($tasks as $task)
+          <tbody>
+            <tr class="text-gray-700">
+              <td class="border-b-2 p-4 dark:border-dark-5">
+                {{ $task['todo'] }}
+              </td>
+              <td class="border-b-2 p-4 dark:border-dark-5 flex justify-center">
+                <button type="submit" class="bg-red-600 hover:bg-red-500 text-white rounded px-4 py-2">削除</button>
+              </td>
+          </tbody>
+      @endforeach
+        </table>
+      </div>
     </div>
   </main>
   {{-- メインここまで --}}

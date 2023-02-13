@@ -53,7 +53,12 @@
                 {{ $task['todo'] }}
               </td>
               <td class="border-b-2 p-4 dark:border-dark-5 flex justify-center">
-                <button type="submit" class="bg-red-600 hover:bg-red-500 text-white rounded px-4 py-2">削除</button>
+                <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
+                  @csrf
+                  @method('delete')
+                  <button type="submit" class="bg-red-600 hover:bg-red-500 text-white rounded px-4 py-2">削除
+                  </button>
+                </form>
               </td>
           </tbody>
       @endforeach

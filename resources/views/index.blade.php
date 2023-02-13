@@ -26,7 +26,8 @@
   <main>
     <div class="w-full mt-12">
       {{-- TODO追加フォーム --}}
-      <form action="#" method="POST">
+      <form action="{{ route('tasks.store') }}" method="POST">
+        @csrf
         <div class="w-4/3 flex justify-center">
           <input type="text" name="todo" placeholder="タスクを入力してください" class="border border-black w-[220px] px-2 rounded-md">
           <button type="submit" name="send" class="ml-4 bg-green-600 hover:bg-green-500 text-white rounded px-4 py-2">追加</button>

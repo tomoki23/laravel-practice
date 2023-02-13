@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StockPostRequest;
 use App\Models\Task;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class TaskController extends Controller
         return view('index', compact('tasks'));
     }
 
-    public function store(Request $request)
+    public function store(StockPostRequest $request)
     {
         $task = new Task();
         $task->taskRegister($request);

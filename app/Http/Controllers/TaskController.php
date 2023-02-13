@@ -13,4 +13,12 @@ class TaskController extends Controller
 
         return view('index', compact('tasks'));
     }
+
+    public function store(Request $request)
+    {
+        $task = new Task();
+        $task->taskRegister($request);
+
+        return redirect('tasks');   
+    }
 }

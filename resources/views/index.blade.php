@@ -33,6 +33,9 @@
           <button type="submit" name="send" class="ml-4 bg-green-600 hover:bg-green-500 text-white rounded px-4 py-2">追加</button>
         </div>
       </form>
+      @foreach ($errors->all() as $message)
+        {{ $message }}
+      @endforeach
       {{-- TODO追加フォームここまで --}}
       <div>
         <table class="w-1/2 mt-12 m-auto">

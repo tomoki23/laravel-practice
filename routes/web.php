@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tasks', [TaskController::class, 'index'])->name('index');
+// Route::get('/tasks', [TaskController::class, 'index'])->name('index');
+Route::resource('/tasks', TaskController::class);

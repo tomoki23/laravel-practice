@@ -19,6 +19,14 @@ class TaskController extends Controller
         $task = new Task();
         $task->taskRegister($request);
 
-        return redirect('tasks');   
+        return redirect('tasks');
+    }
+
+    public function destroy($id)
+    {
+        $delete_task = Task::find($id);
+        $delete_task->delete();
+
+        return to_route('tasks.index');
     }
 }

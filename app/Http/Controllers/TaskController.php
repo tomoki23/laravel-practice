@@ -28,6 +28,6 @@ class TaskController extends Controller
         $delete_task = Task::find($id);
         $delete_task->delete();
 
-        return to_route('tasks.index');
+        return redirect('tasks');
     }
 }

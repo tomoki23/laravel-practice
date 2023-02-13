@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 // Route::resource('/tasks', TaskController::class);
-Route::get('tasks', [TaskController::class, 'index'])->name('tasks.index');
-Route::post('tasks', [TaskController::class, 'store'])->name('tasks.store');
-Route::delete('tasks/{$id}', [TaskController::class, 'index'])->name('tasks.destroy');
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');

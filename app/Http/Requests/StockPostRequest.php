@@ -13,7 +13,7 @@ class StockPostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StockPostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'todo' => 'required|max:255'
         ];
     }
 }
